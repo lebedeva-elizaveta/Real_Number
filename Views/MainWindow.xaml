@@ -1,0 +1,42 @@
+﻿<Window x:Class="task1_c.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:task1_c"
+        Title="Real Number Calculator" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="First Real Number:"/>
+            <TextBox Text="{Binding FirstRealNumber.Sign}" Width="30" Margin="5"/>
+            <TextBox Text="{Binding FirstRealNumber.Mantissa}" Width="60" Margin="5"/>
+            <TextBox Text="{Binding FirstRealNumber.Exponent}" Width="30" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Second Real Number:"/>
+            <TextBox Text="{Binding SecondRealNumber.Sign}" Width="30" Margin="5"/>
+            <TextBox Text="{Binding SecondRealNumber.Mantissa}" Width="60" Margin="5"/>
+            <TextBox Text="{Binding SecondRealNumber.Exponent}" Width="30" Margin="5"/>
+        </StackPanel>
+
+        <Button Grid.Row="2" Content="Compare" Command="{Binding CompareCommand}" Margin="5"/>
+        <Button Grid.Row="3" Content="Add" Command="{Binding AddCommand}" Margin="5"/>
+        <Button Grid.Row="4" Content="Subtract" Command="{Binding SubtractCommand}" Margin="5"/>
+        <Button Grid.Row="5" Content="Multiply" Command="{Binding MultiplyCommand}" Margin="5"/>
+        <Button Grid.Row="6" Content="Divide" Command="{Binding DivideCommand}" Margin="5"/>
+
+        <TextBlock Grid.Row="7" Text="{Binding Result}" TextWrapping="Wrap" Margin="5"/>
+        <TextBlock Grid.Row="8" Text="{Binding CompareResult}" TextWrapping="Wrap" Margin="5"/>
+    </Grid>
+</Window>
