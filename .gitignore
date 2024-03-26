@@ -400,3 +400,6 @@ FodyWeavers.xsd
 bin/
 obj/
 task1_c.csproj.user
+"bin/Debug/net6.0-windows" 
+"obj" 
+"task1_c.csproj.user" 
